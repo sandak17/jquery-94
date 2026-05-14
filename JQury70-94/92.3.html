@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery-4.0.0.min.js"></script>
+</head>
+<body>
+<h2>заголовок1</h2>
+<span>заголовок2</span>
+
+  <script>
+$('h1, h2, h3, h4, h5, h6').each(function() {
+  const $nextElement = $(this).next();
+  if (!$nextElement.is('p')) {
+    const headerText = $(this).text();
+    $(this).after('<p>' + headerText + '</p>');
+  }
+});
+
+  </script>
+</body>
+</html>
